@@ -27,6 +27,9 @@
         <meta name="author" content="{{ AUTHOR }}" />
     {% endblock %}
 
+    <!-- site icon -->
+    <link rel="shortcut icon" href="{{ SITEURL }}/{{ FAVICON }}">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
     <!-- Animate.css -->
@@ -73,7 +76,7 @@
             <div class="clearfix"></div>
             <h1  id="fh5co-logo">
                 <a href="{{ SITEURL }}/index.html">
-                    <img src="{{ LOGO }}" />
+                    <img src="{{ SITEURL }}/{{ LOGO }}" />
                 </a>
             </h1>
             <nav class="fh5co-main-menu" role="navigation">
