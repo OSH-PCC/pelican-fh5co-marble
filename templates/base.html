@@ -1,9 +1,9 @@
 
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="ja" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="ja" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="ja" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="ja" class="no-js"> <!--<![endif]-->
     <head>
     {% if GOOGLE_TRACKING_ID %}
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -19,7 +19,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
-    <meta name="description" content="{{ DESCRIPTION }}">
     <!-- Google Auth -->
     <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION_TOKEN }}">
 
@@ -71,18 +70,18 @@
     <body>
     <div id="fh5co-page">
         <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-        <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+        <aside id="fh5co-aside" class="border js-fullheight">
 
-            <nav class="fh5co-main-menu" role="navigation">
+            <nav class="fh5co-main-menu">
                 {% include 'partial/languages.html' %}
             </nav>
             <div class="clearfix"></div>
             <h1  id="fh5co-logo">
                 <a href="{{ SITEURL }}/index.html">
-                    <img src="{{ SITEURL }}/{{ LOGO }}" />
+                    <img src="{{ SITEURL }}/{{ LOGO }}" alt="{{ SITENAME }}"/>
                 </a>
             </h1>
-            <nav class="fh5co-main-menu" role="navigation">
+            <nav class="fh5co-main-menu">
                 {% include 'partial/mainNavigation.html' %}
                 {% if 'tipue_search' in PLUGINS %}
                     {% include 'partial/search.html' %}
