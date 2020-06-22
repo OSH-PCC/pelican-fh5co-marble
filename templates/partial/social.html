@@ -1,21 +1,21 @@
 <ul id="social">
     {% for social in SOCIAL %}
         {% if 'github' in social.1%}
-            <li><a href="{{ social.1 }}"><i class="fab fa-github fa-2x" title="{{ social.0 }}"></i></a></li>
+            <li><a href="{{ social.1 }}"><i class="fab fa-github fa-2x animated fadeInUp" title="{{ social.0 }}"></i></a></li>
         {% elif 'twitter' in social.1%}
-            <li><a href="{{ social.1 }}"><i class="fab fa-twitter fa-2x" title="{{ social.0 }}"></i></a></li>
+            <li><a href="{{ social.1 }}"><i class="fab fa-twitter fa-2x animated fadeInUp" title="{{ social.0 }}"></i></a></li>
         {% elif 'google' in social.1%}
-            <li><a href="{{ social.1 }}"><i class="fab fa-google-plus fa-2x" title="{{ social.0 }}"></i></a></li>
+            <li><a href="{{ social.1 }}"><i class="fab fa-google-plus fa-2x animated fadeInUp" title="{{ social.0 }}"></i></a></li>
         {% elif 'facebook' in social.1%}
-            <li><a href="{{ social.1 }}"><i class="fab fa-facebook fa-2x" title="{{ social.0 }}"></i></a></li>
+            <li><a href="{{ social.1 }}"><i class="fab fa-facebook fa-2x animated fadeInUp" title="{{ social.0 }}"></i></a></li>
         {% elif 'instagram' in social.1%}
-            <li><a href="{{ social.1 }}"><i class="fab fa-instagram fa-2x" title="{{ social.0 }}"></i></a></li>
+            <li><a href="{{ social.1 }}"><i class="fab fa-instagram fa-2x animated fadeInUp" title="{{ social.0 }}"></i></a></li>
         {% elif 'linkedin' in social.1%}
-            <li><a href="{{ social.1 }}"><i class="fab fa-linkedin fa-2x" title="{{ social.0 }}"></i></a></li>
+            <li><a href="{{ social.1 }}"><i class="fab fa-linkedin fa-2x animated fadeInUp" title="{{ social.0 }}"></i></a></li>
         {% elif 'readthedocs' in social.1%}
-            <li><a href="{{ social.1 }}"><i class="fab fa-document fa-2x" title="{{ social.0 }}"></i></a></li>
+            <li><a href="{{ social.1 }}"><i class="fab fa-document fa-2x animated fadeInUp" title="{{ social.0 }}"></i></a></li>
         {% elif 'travis-ci' in social.1%}
-            <li><a href="{{ social.1 }}"><i class="fab fa-spanner fa-2x" title="{{ social.0 }}"></i></a></li>
+            <li><a href="{{ social.1 }}"><i class="fab fa-spanner fa-2x animated fadeInUp" title="{{ social.0 }}"></i></a></li>
         {% endif %}
     {% endfor %}
 </ul>
