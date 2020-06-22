@@ -38,35 +38,10 @@
         <meta name="description" content="{{ SITEDESCRIPTION }}">
         <meta name="author" content="{{ AUTHOR }}">
         {% endblock %}
-
+        
         <!-- site icon -->
         <link rel="shortcut icon" href="{{ SITEURL }}/{{ FAVICON }}">
-
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-
-        <!-- Animate.css -->
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/animate.css">
-        <!-- Icomoon Icon Fonts-->
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/icomoon.css" media="print" onload="this.media='all'">
-        <!-- Bootstrap  -->
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.css" media="print" onload="this.media='all'">
-        <!-- Flexslider  -->
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/flexslider.css">
-        <!-- Theme style  -->
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
-        <!-- Custom style  -->
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/custom.css">
-        <!-- pygments code highlight -->
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygments.css" media="print" onload="this.media='all'">
-        <!-- tipue search -->
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/css/tipuesearch.css" media="print" onload="this.media='all'">
-
-        <!-- Modernizr JS -->
-        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/modernizr-2.6.2.min.js"></script>
-        <!-- FOR IE9 below -->
-        <!--[if lt IE 9]>
-        <script src="/theme/js/respond.min.js"></script>
-        <![endif]-->
+        
         {% if FEED_ALL_ATOM %}
             <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom">
         {% endif %}
@@ -74,6 +49,42 @@
         {% if FEED_ALL_RSS %}
             <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS">
         {% endif %}
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+
+        <!-- Animate.css -->
+        <!-- <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/animate.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.compat.min.css" integrity="sha256-Qj+zEEvubER4lO5l200c3UfufBOsKTgpsgJU0/t3CoU=" crossorigin="anonymous" />
+        <!-- Icomoon Icon Fonts-->
+        <!-- <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/icomoon.css" media="print" onload="this.media='all'"> -->
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/icomoon@1.0.0/style.css" integrity="sha256-xYCilzg1PSlpku4dmX4bH8O+UKcm1nn4ujWYmzsgyMU=" crossorigin="anonymous"> -->
+        <!-- Bootstrap  -->
+        <!-- <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.css" media="print" onload="this.media='all'"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" onload="this.media='all'">
+        <!-- Flexslider  -->
+        <!-- <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/flexslider.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css" integrity="sha256-ix4NEiyExf0o9g2FKaOSmi++y3NuwbRLiL3Ahw+IX8s=" crossorigin="anonymous" onload="this.media='all'">
+        <!-- Theme style  -->
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
+        <!-- Custom style  -->
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/custom.css">
+        <!-- pygments code highlight -->
+        <!-- <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygments.css" media="print" onload="this.media='all'"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/vs.min.css" integrity="sha256-eP4Vo66NBPibeCiQAKBnSATpJwb5h5m86Rj17RJtv0s=" crossorigin="anonymous" onload="this.media='all'">
+        <!-- tipue search -->
+        <!-- <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/tipuesearch/css/tipuesearch.css" media="print" onload="this.media='all'"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.css" integrity="sha256-zuGZE2/2OoFIZCxDR8hIGYc4vwxtTobqHs6p2N+uqdU=" crossorigin="anonymous" onload="this.media='all'">
+        <!-- Modernizr JS -->
+        <!-- <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/modernizr-2.6.2.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
+        <!-- Font Awesome -->
+        <script defer src="https://kit.fontawesome.com/906db46080.js" crossorigin="anonymous"></script>
+        
+        <!-- FOR IE9 below -->
+        <!--[if lt IE 9]>
+        /* <script src="/theme/js/respond.min.js"></script> */
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+        <![endif]-->
 
     </head>
     <body>
@@ -98,11 +109,10 @@
                     {% endif %}
                     {% endfilter %}
                 </nav>
-                <nav id="social">
-                    {% filter indent(width=12,first=True) %}
-                    {% include 'partial/social.html' %}
-                    {% endfilter%}
-                </nav>
+
+                {% filter indent(width=8,first=True) %}
+                {% include 'partial/social.html' %}
+                {% endfilter%}
             </aside>
             
             <div id="fh5co-main">
@@ -115,16 +125,21 @@
     
         <!-- jQuery -->
         <!-- <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script> -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Popper.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <!-- jQuery Easing -->
-        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.easing.1.3.js"></script>
+        <!-- <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.easing.1.3.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.min.js" integrity="sha256-5ZrdaeOQG3t2uVEkC6FxsGF2y3taTxhdjyGLXi3RUDk=" crossorigin="anonymous"></script>
         <!-- Bootstrap -->
-        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
+        <!-- <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <!-- Waypoints -->
-        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.waypoints.min.js"></script>
+        <!-- <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.waypoints.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
         <!-- Flexslider -->
-        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.flexslider-min.js"></script>
-    
+        <!-- <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.flexslider-min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider.min.js" integrity="sha256-wql/MDbyML50PJjxoPTgCa8ByZzyPX6HftEDWu6jovY=" crossorigin="anonymous"></script>
         {% block custom_js %}{% endblock %}
     
         <!-- MAIN JS -->

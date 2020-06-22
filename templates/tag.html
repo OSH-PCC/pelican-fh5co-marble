@@ -2,7 +2,7 @@
 {% block title %}{{ SITENAME }} - {{ tag }}{% endblock %}
 {% block content %}
     <div class="fh5co-narrow-content">
-        <h1 class="fh5co-heading-colored"><i class="icon-folder"></i> {{ tag }}</h1>
+        <h1 class="fh5co-heading-colored"><i class="fas fa-folder"></i> {{ tag }}</h1>
         {% for article in articles %}
             {% include 'partial/articleTeaser.html' %}
         {% endfor %}

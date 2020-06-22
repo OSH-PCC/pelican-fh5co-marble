@@ -2,14 +2,14 @@
 {% block title %}{{ _('Tags') }}{% endblock %}
 {% block content %}
     <div class="fh5co-narrow-content">
-        <h1 class="fh5co-heading-colored"><i class="icon-tags"></i> {{ _('Tags') }}</h1>
+        <h1 class="fh5co-heading-colored"><i class="fas fa-tags"></i> {{ _('Tags') }}</h1>
         <div class="animate-box" data-animate-effect="fadeInLeft">
             {% for tag, articles in tags %}
                 <a href="{{ SITEURL }}/{{ tag.url }}" class="overview-link col-md-6 animate-box" data-animate-effect="fadeInLeft">
                     <div class="wrapper">
                         <div class="fh5co-feature">
                             <div class="fh5co-icon">
-                                <i class="icon-tag3"></i>
+                                <i class="fas fa-tag fa-3x"></i>
                             </div>
                             <div class="fh5co-text">
                                 <h3>#{{ tag }}</h3>
