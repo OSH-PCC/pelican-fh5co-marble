@@ -4,9 +4,13 @@
             <a href="{{ SITEURL }}/{{ article.url }}" class="blog-img"><img src="{{ article.image }}" class="img-responsive" alt="{{ article.title }}"></a>
         {% endif %}
         <div class="desc">
-            <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+            <h3>
+                <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+            </h3>
             <span><small>{{ article.locale_date }}</small></span>
-            <span><small>{{ _('by') }} {{ article.author }}</small> / <small>{{ article.category }}</small></span>
+            <span>
+                <small>{{ _('by') }} {{ article.author }}</small> / <small>{{ article.category }}</small>
+            </span>
             <div>{{ article.summary }}</div>
             <a href="{{ SITEURL }}/{{ article.url }}" class="btn btn-primary">{{ _('Read more') }} <i class="icon-arrow-right3"></i></a>
         </div>
