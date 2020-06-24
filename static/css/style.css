@@ -11,6 +11,8 @@ body {
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.5);
   background: whitesmoke;
+  width: 100vw;
+  height: 100vh;
 }
 @media screen and (max-width: 992px) {
   body {
@@ -32,7 +34,7 @@ a:hover, a:active, a:focus {
 
 p {
   margin-bottom: 1.5em;
-  white-space: pre-wrap;
+  white-space: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,6 +42,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 30px 0;
+}
+
+h2 {
+  margin: 1.5em 0;
 }
 
 figure {
@@ -78,13 +84,13 @@ figure figcaption {
 
 #fh5co-page {
   width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
 }
 
 #fh5co-aside {
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding: 60px 0;
   width: 20%;
   position: fixed;
   bottom: 0;
@@ -270,35 +276,52 @@ figure figcaption {
 }
 
 #fh5co-main {
-  width: 80%;
+  width: calc(80% - (5% * 2));
   float: right;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  margin: 0 5%;
 }
 @media screen and (max-width: 1200px) {
   #fh5co-main {
-    width: 70%;
+    width: calc(70% - (5% * 2));
   }
 }
 @media screen and (max-width: 768px) {
   #fh5co-main {
-    width: 100%;
+    width: calc(100% - (8% * 2));
+    margin: auto 8%;
   }
 }
 #fh5co-main .fh5co-narrow-content {
   position: relative;
-  width: 93%;
-  margin: 0 auto;
-  padding: 4em 0;
+  width: 100%;
   clear: both;
+  padding: 40px 0;
+  margin: 0;
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (min-width: 768px) {
   #fh5co-main .fh5co-narrow-content {
-    width: 100%;
-    padding: 4em 1em;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+  #fh5co-main .fh5co-narrow-content > *:first-child {
+    margin-top: 0;
+  }
+  .fh5co-section {
+    margin-top: 40px;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  fh5co-section {
+    margin-top: 50px;
+  }
+}
+
+
 
 #fh5co-hero {
   min-height: 500px;
@@ -489,13 +512,14 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .blog-entry {
   width: 100%;
   float: left;
-  background: #fff;
+  /* background: #fff; */
+  margin-bottom: 30px;
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .blog-entry {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
-}
+} */
 .blog-entry .blog-img {
   width: 100%;
   float: left;
@@ -518,13 +542,15 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 }
 .blog-entry .desc {
   padding: 25px;
+  background: #fff;
+
 }
 .blog-entry .desc h3 {
   font-size: 15px;
-  text-transform: uppercase;
   margin-bottom: 10px;
   letter-spacing: 1px;
   line-height: auto;
+  margin-top: 10px;
 }
 .blog-entry .desc h3 a {
   color: #000;
@@ -856,7 +882,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 }
 @media screen and (max-width: 768px) {
   .fh5co-heading {
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
   }
 }
 
@@ -876,6 +902,8 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   -o-transition: 0.5s;
   transition: 0.5s;
   padding: 8px 20px !important;
+  width: 100%;
+  word-wrap:break-word;
 }
 .btn.btn-sm {
   padding: 4px 15px !important;
@@ -1023,10 +1051,6 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   height: 130px;
 }
 
-.fh5co-nav-toggle {
-  cursor: pointer;
-  text-decoration: none;
-}
 .fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after {
   background: #000;
 }
@@ -1116,7 +1140,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 
 .fh5co-nav-toggle {
   position: fixed;
-  left: 0;
+  left: calc(8% - 20px);
   top: 0px;
   z-index: 9999;
   cursor: pointer;
@@ -1126,6 +1150,8 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  cursor: pointer;
+  text-decoration: none;
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav-toggle {
@@ -1166,10 +1192,6 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   .row-bottom-padded-sm {
     padding-bottom: 1em;
   }
-}
-
-.col-padding {
-  padding: 10px !important;
 }
 
 .js .animate-box {

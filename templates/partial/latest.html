@@ -1,15 +1,15 @@
 {% if articles|length > 0 %}
-<div class="fh5co-narrow-content">
+<main class="fh5co-narrow-content">
     <h2 class="fh5co-heading animated fadeInLeft">
         {{ _('Recent articles') }}
     </h2>
-    <div class="row row-bottom-padded-md">
+    <section class="fh5co-section row">
         {% filter indent(width=8, first=True) %}
-        {% for article in articles[0:4] %}
+        {% for article in articles[:DEFAULT_PAGINATION] %}
             {% include 'partial/articleTeaser.html' %}
         {% endfor %}
         {% endfilter %}
     
-    </div>
-</div>
+    </section>
+</main>
 {% endif %}
